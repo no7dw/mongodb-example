@@ -4,18 +4,20 @@ var MongoClient = require('mongodb').MongoClient
 // Connection URL
 var url = 'mongodb://localhost:27017/demo';
 
+var options = {
+  db: { native_parser: true },
+  server: { poolSize: 1 }
+}
+
 var findaddr = function(db, callback) {
   // Get the addr collection
-  var collection = db.collection('addr');
-  // Find some addr
-  collection.find({}).toArray(function(err, docs) {
+  db.collection('addr').find({}).toArray(function(err, docs) {
     
     callback(err, docs);
   });      
 }
-
 // Use connect method to connect to the Server
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(url, options, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server");
   findaddr(db,function(err, docs){
