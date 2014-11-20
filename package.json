@@ -4,10 +4,12 @@
   "description": "mongodb-example",
   "main": "index.js",
   "repository": {
-    "type": "git",
-    "url": "git://github.com/christkv/myfirstproject.git"
+    "type": "https",
+    "url": "https://github.com/no7dw/mongodb-example.git"
   },
   "dependencies": {
-    "mongodb": "~2.0"
+    "mongodb": "~2.0",
+    "generic-pool":"~2.0"
+
   }
 }

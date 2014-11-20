@@ -17,6 +17,8 @@ var findaddr = function(db, callback) {
   });      
 }
 // Use connect method to connect to the Server
+// note that: this is not good for node (single process ) that 
+// connect every time, this is just for demo
 MongoClient.connect(url, options, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server");
