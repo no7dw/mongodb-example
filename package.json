@@ -1,0 +1,13 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "mongodb-example",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/christkv/myfirstproject.git"
+  },
+  "dependencies": {
+    "mongodb": "~2.0"
+  }
+}
